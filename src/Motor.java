@@ -26,7 +26,7 @@ public class Motor {
     }
 
     public void percorre(int distancia) {
-        quilometragem += distancia;
+        this.quilometragem += distancia;
     }
 
     @Override

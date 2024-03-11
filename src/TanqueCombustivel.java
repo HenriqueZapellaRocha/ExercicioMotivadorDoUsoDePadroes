@@ -10,6 +10,12 @@ public class TanqueCombustivel {
         this.combustivelDisponivel = 0;
     }
 
+    public TanqueCombustivel(int capacidade) {
+        this.tipoCombustivel = TipoCombustivel.FLEX;
+        this.capacidade = capacidade;
+        this.combustivelDisponivel = 0;
+    }
+
     public TipoCombustivel getTipoCombustivel() {
         return tipoCombustivel;
     }
