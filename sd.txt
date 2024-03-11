@@ -1,0 +1,9 @@
+
+
+Extends motor 
+
+Dois consumos 
+
+Leva em considerado o 
+consumo do 
+ultimo abastecimento 

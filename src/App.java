@@ -5,11 +5,14 @@ public class App {
         Carro esportivo = new Carro("Esportivo", TipoCombustivel.GASOLINA, 6, 45);
         Carro utilitario = new Carro("Utilitario", TipoCombustivel.DIESEL, 5, 70);
         Carro suv = new Carro(TipoCombustivel.GASOLINA, 8, 55, "SUV");
+        Carro suvFlex = new Carro("SUVflex", 8, 6, 65);
 
-
+        
         System.out.println("Tipos de veiculos:");
         System.out.println(basico);
         System.out.println(esportivo);
+        System.out.println(utilitario);
+        System.out.println(suv);
 
         System.out.println("\n\n----------------");
         System.out.println("\nAbastencendo carro basico com gasolina");
@@ -42,8 +45,16 @@ public class App {
         System.out.println(suv);
         System.out.println("\nViajando com o carro suv");
         suv.viaja(250);
-        System.out.println(suv);
+        System.out.println(suv); 
 
+
+        System.out.println("\n\n----------------");
+        System.out.println("\nAbastencendo carro suv flex com diesel");
+        suvFlex.abastece(TipoCombustivel.GASOLINA, 65);
+        System.out.println(suvFlex);
+        System.out.println("\nViajando com o carro suv flex");
+        suvFlex.viaja(9);
+        System.out.println(suvFlex);
 
     }
 }
