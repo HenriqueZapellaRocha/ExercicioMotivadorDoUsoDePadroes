@@ -34,6 +34,12 @@ public class MotorFlex extends Motor {
     public void alteraEstado(TipoCombustivel estadoNovo) {
         estadoAtual = estadoNovo;
     }
+
+    @Override
+    public String toString() {
+        return "Motor [consumoGasolina=" + super.getConsumo() + " consumoAlcool=" + this.consumoAlcool  + ", quilometragem=" + super.getQuilometragem() + ", tipoMotor=" + super.getTipoMotor() + "]";
+    }
+    
     
     
 }
