@@ -4,7 +4,14 @@ public class Carro {
     private Motor motor;
     private TanqueCombustivel tanque;
 
-    public Carro(String modelo, TipoCombustivel tipoCombustivel, int consumoMotor, int capacidadeTanque) {
+    public Carro(String modelo, TipoCombustivel tipoCombustivel, int consumoMotor, int capacidadeTanque, int quilometragem) {
+        if(modelo == "Econo") {
+            if(quilometragem >= 50000) {
+                consumoMotor -= 10;
+            } else {
+                consumoMotor -= (quilometragem / 5000);
+            }
+        }
         this.modelo = modelo;
         motor = new Motor(tipoCombustivel, consumoMotor);
         tanque = new TanqueCombustivel(tipoCombustivel, capacidadeTanque);
@@ -65,11 +72,16 @@ public class Carro {
     public boolean viaja(int distancia) {
         if (verificaSePodeViajar(distancia) >= distancia) {
             motor.percorre(distancia);
+            if(modelo == "Econo" && motor.getQuilometragem() <= 50000 && motor.getQuilometragem() % 5000 == 0) {
+                motor.diminuiConsumo();
+            }
             tanque.gasta(motor.combustivelNecessario(distancia));
             return true;
         }
         return false;
     }
+
+
 
     @Override
     public String toString() {

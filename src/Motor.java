@@ -29,6 +29,10 @@ public class Motor {
         this.quilometragem += distancia;
     }
 
+    public void diminuiConsumo() {
+        this.consumo -= (quilometragem / 5000);
+    }
+
     @Override
     public String toString() {
         return "Motor [consumo=" + consumo + ", quilometragem=" + quilometragem + ", tipoMotor=" + tipoMotor + "]";

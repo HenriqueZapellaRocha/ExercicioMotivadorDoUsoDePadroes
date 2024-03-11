@@ -1,12 +1,12 @@
 public class App {
     public static void main(String[] args) throws Exception {
 
-        Carro basico = new Carro("Basico", TipoCombustivel.GASOLINA, 10, 55);
-        Carro esportivo = new Carro("Esportivo", TipoCombustivel.GASOLINA, 6, 45);
-        Carro utilitario = new Carro("Utilitario", TipoCombustivel.DIESEL, 5, 70);
+        Carro basico = new Carro("Basico", TipoCombustivel.GASOLINA, 10, 55, 0);
+        Carro esportivo = new Carro("Esportivo", TipoCombustivel.GASOLINA, 6, 45, 0);
+        Carro utilitario = new Carro("Utilitario", TipoCombustivel.DIESEL, 5, 70, 0);
         Carro suv = new Carro(TipoCombustivel.GASOLINA, 8, 55, "SUV");
         Carro suvFlex = new Carro("SUVflex", 8, 6, 65);
-
+        Carro econo = new Carro("Econo", TipoCombustivel.GASOLINA, 20, 55, 50000);
         
         System.out.println("Tipos de veiculos:");
         System.out.println(basico);
@@ -55,6 +55,14 @@ public class App {
         System.out.println("\nViajando com o carro suv flex");
         suvFlex.viaja(9);
         System.out.println(suvFlex);
+
+        System.out.println("\n\n----------------");
+        System.out.println("\nAbastencendo econo com gasolina");
+        econo.abastece(TipoCombustivel.GASOLINA, 55);
+        System.out.println(suvFlex);
+        System.out.println("\nViajando com o econo");
+        econo.viaja(1100);
+        System.out.println(econo);
 
     }
 }
