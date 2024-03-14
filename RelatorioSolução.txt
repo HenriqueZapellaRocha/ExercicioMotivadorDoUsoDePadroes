@@ -34,3 +34,12 @@
 
    Para este caso foi adicionado no construtor padrao da classe recebe o argumento quilometragem, e tambem foi adicinando
    IF no momento da viajem e da construcao do objeto.
+
+
+   O que poderia facilitar estas modificações no codigo original? 
+
+   Acredito que se a classe Carro e TanqueCOmbustivel fossem na verdade uma interface e 
+   classes fossem sendo implemetandas a partir dessa interface seria mais facil de se inserir 
+   o que fosse necessario de novo no codigo. Outra ideia seria construir essas duas classes como
+   abstartas e genericas o bastante para que se pudesse implementar as mudanças com facilidade(Acredito
+   que para padrão de projeto essa segunda idea não seja tão interessante).
